@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testExecutions version="1">
+  <file path="C:\Users\91750\Documents\Zemoso_Folder\Zemoso_practice\React-zemoso\blinkist\src\components\Organisms\Navbar\navbar.test.tsx">
+    <testCase name="navbar test testing navbar" duration="394"/>
+  </file>
+  <file path="C:\Users\91750\Documents\Zemoso_Folder\Zemoso_practice\React-zemoso\blinkist\src\components\Organisms\NavbarDropdown\navbarDropdown.test.tsx">
+    <testCase name="dropdown test Navbar Dropdown Test" duration="910"/>
+  </file>
+  <file path="C:\Users\91750\Documents\Zemoso_Folder\Zemoso_practice\React-zemoso\blinkist\src\components\Organisms\LibraryBody\libraryBody.test.tsx">
+    <testCase name="library body test library body" duration="819"/>
+  </file>
+  <file path="C:\Users\91750\Documents\Zemoso_Folder\Zemoso_practice\React-zemoso\blinkist\src\components\Organisms\Entrepreneurship\enterpreneurship.test.tsx">
+    <testCase name="enterprenueship test enterprenuership body" duration="1095"/>
+  </file>
+  <file path="C:\Users\91750\Documents\Zemoso_Folder\Zemoso_practice\React-zemoso\blinkist\src\components\Organisms\CardGrid\cardGrid.test.tsx">
+    <testCase name="Card Grid test card grid" duration="417"/>
+  </file>
+  <file path="C:\Users\91750\Documents\Zemoso_Folder\Zemoso_practice\React-zemoso\blinkist\src\components\molecules\InfoCards\infoCard.test.tsx">
+    <testCase name="info card test info card dropshipping" duration="558"/>
+  </file>
+  <file path="C:\Users\91750\Documents\Zemoso_Folder\Zemoso_practice\React-zemoso\blinkist\src\components\atoms\Buttons\button.test.tsx">
+    <testCase name="button component render text button" duration="339"/>
+    <testCase name="button component render outlined button" duration="65"/>
+  </file>
+  <file path="C:\Users\91750\Documents\Zemoso_Folder\Zemoso_practice\React-zemoso\blinkist\src\components\Organisms\EnterprenureInner\enterprenuer.test.tsx">
+    <testCase name="Card Grid test card grid" duration="352"/>
+  </file>
+  <file path="C:\Users\91750\Documents\Zemoso_Folder\Zemoso_practice\React-zemoso\blinkist\src\components\molecules\IconWithText\iconWithText.test.tsx">
+    <testCase name="iconWithText test search with text" duration="155"/>
+  </file>
+  <file path="C:\Users\91750\Documents\Zemoso_Folder\Zemoso_practice\React-zemoso\blinkist\src\components\Organisms\NavBannner\navBanner.test.tsx">
+    <testCase name="Banner test testing Nav Banner" duration="186"/>
+  </file>
+  <file path="C:\Users\91750\Documents\Zemoso_Folder\Zemoso_practice\React-zemoso\blinkist\src\components\molecules\SimpleButton.tsx\simpleButton.test.tsx">
+    <testCase name="simpleButton test connected rest button" duration="93"/>
+  </file>
+  <file path="C:\Users\91750\Documents\Zemoso_Folder\Zemoso_practice\React-zemoso\blinkist\src\components\Organisms\Footer\footer.test.tsx">
+    <testCase name="footer test testing footer" duration="213"/>
+  </file>
+  <file path="C:\Users\91750\Documents\Zemoso_Folder\Zemoso_practice\React-zemoso\blinkist\src\components\molecules\UnderlinedButton\underlineButton.test.tsx">
+    <testCase name="underline button test selected button test" duration="86"/>
+  </file>
+  <file path="C:\Users\91750\Documents\Zemoso_Folder\Zemoso_practice\React-zemoso\blinkist\src\components\atoms\Image\image.test.tsx">
+    <testCase name="image component dropshipping image" duration="168"/>
+  </file>
+  <file path="C:\Users\91750\Documents\Zemoso_Folder\Zemoso_practice\React-zemoso\blinkist\src\components\molecules\SearchBar\searchBar.test.tsx">
+    <testCase name="search bar test test searchbar" duration="144"/>
+  </file>
+  <file path="C:\Users\91750\Documents\Zemoso_Folder\Zemoso_practice\React-zemoso\blinkist\src\components\atoms\IconButtons\IconButton.test.tsx">
+    <testCase name="Icon button component keyboard arrow down" duration="200"/>
+    <testCase name="Icon button component keyboard up down" duration="52"/>
+  </file>
+</testExecutions>
