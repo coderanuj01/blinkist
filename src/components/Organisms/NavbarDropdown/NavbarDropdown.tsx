@@ -77,6 +77,7 @@ export const NavbarDropdownComponent = (props: NavbarDropdownProps) => {
               {ExtendedNavData.map((item, key) => {
                 return (
                   <Box
+                    key={key}
                     sx={{
                       width: "292px",
                       display: "flex",

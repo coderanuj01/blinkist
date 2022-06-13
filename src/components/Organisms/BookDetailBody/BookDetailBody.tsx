@@ -42,7 +42,9 @@ export const BookDetailBodyComponent = (props: BookDetailsProps) => {
             sx={{ width: "700px", display: "flex", flexDirection: "column" }}
           >
             <Box>
-              <Typography variant="h1">{location.state.text}</Typography>
+              <Typography variant="h1">
+                {location.state ? location.state.text : " "}
+              </Typography>
             </Box>
             <Box sx={{ marginTop: "24px" }}>
               <Typography sx={{ color: "#03314B", fontSize: 20 }}>
@@ -91,7 +93,9 @@ export const BookDetailBodyComponent = (props: BookDetailsProps) => {
             </Box>
           </Box>
           <Box sx={{ width: "303px" }}>
-            <ImageComponent source={location.state.imageSrc}></ImageComponent>
+            <ImageComponent
+              source={location.state ? location.state.imageSrc : "No Image"}
+            ></ImageComponent>
           </Box>
         </Box>
         <Box

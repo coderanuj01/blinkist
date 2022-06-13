@@ -69,9 +69,6 @@ describe("info card test", () => {
 
     const bookReads = screen.getByText("34k reads");
     expect(bookReads).toBeInTheDocument();
-
-    const bookStatus = screen.getByText("Finished");
-    expect(bookStatus).toBeInTheDocument();
   });
 
   it("info card readAgain", () => {
@@ -100,8 +97,33 @@ describe("info card test", () => {
 
     const bookReads = screen.getByText("34k reads");
     expect(bookReads).toBeInTheDocument();
+  });
 
-    const bookStatus = screen.getByText("Finished");
-    expect(bookStatus).toBeInTheDocument();
+  it("info card reading", () => {
+    render(
+      <TestCard
+        source={dropshipping}
+        title="dropShipping"
+        writer="James Moore"
+        readCount={34}
+        readTime={23}
+        readStatus="reading"
+      />
+    );
+
+    const bookElement = screen.getByRole("img");
+    expect(bookElement).toBeInTheDocument();
+
+    const bookTitle = screen.getByText("dropShipping");
+    expect(bookTitle).toBeInTheDocument();
+
+    const bookWriter = screen.getByText("James Moore");
+    expect(bookWriter).toBeInTheDocument();
+
+    const bookTime = screen.getByText("23-minutes read");
+    expect(bookTime).toBeInTheDocument();
+
+    const bookReads = screen.getByText("34k reads");
+    expect(bookReads).toBeInTheDocument();
   });
 });
