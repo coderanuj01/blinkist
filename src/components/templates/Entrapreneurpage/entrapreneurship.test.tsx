@@ -9,18 +9,11 @@ describe("Enterpreneur test", () => {
   test("test enterprenuer template", () => {
     render(
       <BrowserRouter>
-        <Routes>
-          <Route
-            path="*"
-            element={
-              <EntrepreneurshipPageComponent
-                header={<NavbarComponent />}
-                body={<EntrepreneurshipComponent />}
-                footer={<FooterComponent />}
-              ></EntrepreneurshipPageComponent>
-            }
-          ></Route>
-        </Routes>
+        <EntrepreneurshipPageComponent
+          header={<NavbarComponent />}
+          body={<EntrepreneurshipComponent />}
+          footer={<FooterComponent />}
+        ></EntrepreneurshipPageComponent>
       </BrowserRouter>
     );
   });
