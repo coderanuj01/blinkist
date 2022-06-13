@@ -167,9 +167,6 @@ export const InfoCardComponent = (props: InfocardProps) => {
             </Box>
           </Box>
         );
-
-      default:
-        break;
     }
   };
 
