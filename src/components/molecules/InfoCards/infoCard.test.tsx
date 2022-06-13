@@ -69,6 +69,9 @@ describe("info card test", () => {
 
     const bookReads = screen.getByText("34k reads");
     expect(bookReads).toBeInTheDocument();
+
+    const buttonText = screen.getByText("Add to library");
+    expect(buttonText).toBeInTheDocument();
   });
 
   it("info card readAgain", () => {
@@ -97,6 +100,9 @@ describe("info card test", () => {
 
     const bookReads = screen.getByText("34k reads");
     expect(bookReads).toBeInTheDocument();
+
+    const buttonText = screen.getByText("Read again");
+    expect(buttonText).toBeInTheDocument();
   });
 
   it("info card reading", () => {
