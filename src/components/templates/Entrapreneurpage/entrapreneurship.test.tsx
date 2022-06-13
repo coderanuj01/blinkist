@@ -5,7 +5,7 @@ import { EntrepreneurshipComponent } from "../../Organisms/Entrepreneurship/Entr
 import { FooterComponent } from "../../Organisms/Footer/footer";
 
 describe("Enterpreneur test", () => {
-  it("test enterprenuer template", () => {
+  test("test enterprenuer template", () => {
     <EntrepreneurshipPageComponent
       header={<NavbarComponent />}
       body={<EntrepreneurshipComponent />}

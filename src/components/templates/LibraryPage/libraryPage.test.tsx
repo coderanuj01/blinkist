@@ -5,7 +5,7 @@ import { LibraryBodyComponent } from "../../Organisms/LibraryBody/LibraryBody";
 import { FooterComponent } from "../../Organisms/Footer/footer";
 
 describe("Library Page test", () => {
-  it("testing library page", () => {
+  test("testing library page", () => {
     <LibraryPageComponent
       header={<NavbarComponent />}
       body={<LibraryBodyComponent />}
