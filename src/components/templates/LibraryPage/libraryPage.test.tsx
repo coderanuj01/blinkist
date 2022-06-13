@@ -6,12 +6,10 @@ import { FooterComponent } from "../../Organisms/Footer/footer";
 
 describe("Library Page test", () => {
   it("testing library page", () => {
-    render(
-      <LibraryPageComponent
-        header={<NavbarComponent />}
-        body={<LibraryBodyComponent />}
-        footer={<FooterComponent />}
-      />
-    );
+    <LibraryPageComponent
+      header={<NavbarComponent />}
+      body={<LibraryBodyComponent />}
+      footer={<FooterComponent />}
+    />;
   });
 });
