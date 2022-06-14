@@ -73,6 +73,30 @@ export const InfoCardComponent = (props: InfocardProps) => {
           </Box>
         );
 
+      case "readAgain":
+        return (
+          <Box
+            sx={{
+              marginTop: "0px",
+              borderTop: "1px solid #E1ECFC",
+              paddingTop: "7px",
+            }}
+          >
+            <Box sx={{ display: "flex", justifyContent: "center" }}>
+              <Typography>Read again</Typography>
+            </Box>
+            <Box
+              sx={{
+                display: "flex",
+                backgroundColor: "#E1ECFC",
+                height: "15px",
+                width: "283px",
+                marginTop: "6px",
+              }}
+            ></Box>
+          </Box>
+        );
+
       case "finished":
         return (
           <Box
@@ -105,30 +129,6 @@ export const InfoCardComponent = (props: InfocardProps) => {
                 }}
               ></Box>
             </Box>
-          </Box>
-        );
-
-      case "readAgain":
-        return (
-          <Box
-            sx={{
-              marginTop: "0px",
-              borderTop: "1px solid #E1ECFC",
-              paddingTop: "7px",
-            }}
-          >
-            <Box sx={{ display: "flex", justifyContent: "center" }}>
-              <Typography>Read again</Typography>
-            </Box>
-            <Box
-              sx={{
-                display: "flex",
-                backgroundColor: "#E1ECFC",
-                height: "15px",
-                width: "283px",
-                marginTop: "6px",
-              }}
-            ></Box>
           </Box>
         );
 
