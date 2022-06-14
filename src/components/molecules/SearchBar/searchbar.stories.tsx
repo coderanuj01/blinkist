@@ -7,13 +7,7 @@ export default {
   component: SearchbarComponent,
 };
 
-type searchbarProps = {
-  children?: React.ReactNode;
-};
-
-const Template: Story<searchbarProps> = (args) => (
-  <SearchbarComponent {...args}></SearchbarComponent>
-);
+const Template: Story = () => <SearchbarComponent></SearchbarComponent>;
 
 export const SearchBar = Template.bind({});
 SearchBar.args = {

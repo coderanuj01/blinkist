@@ -13,8 +13,7 @@ type ButtonProps = {
     | "success"
     | "error"
     | "info"
-    | "warning"
-    | undefined;
+    | "warning";
   onMouseEnter?: () => void;
   onMouseLeave?: () => void;
   onClick?: () => void;

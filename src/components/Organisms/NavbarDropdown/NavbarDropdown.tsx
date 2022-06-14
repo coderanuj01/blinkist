@@ -1,15 +1,10 @@
 import { Box, ThemeProvider, Typography } from "@mui/material";
-import React from "react";
 import { useNavigate } from "react-router-dom";
 import ExtendedNavData from "../../../data/NavDropdownData";
 import theme from "../../../theme/theme";
 import { IconTextComponent } from "../../molecules/IconWithText/IconText";
 
-type NavbarDropdownProps = {
-  children?: React.ReactNode;
-};
-
-export const NavbarDropdownComponent = (props: NavbarDropdownProps) => {
+export const NavbarDropdownComponent = () => {
   const navigate = useNavigate();
   const entrapreneurPage = () => {
     navigate("/entrepreneurship");

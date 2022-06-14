@@ -1,9 +1,7 @@
 import { Box, ThemeProvider, Typography } from "@mui/material";
 import theme from "../../../theme/theme";
 
-type NavBannerProps = {};
-
-export const NavBannerComponent = (props: NavBannerProps) => {
+export const NavBannerComponent = () => {
   return (
     <ThemeProvider theme={theme}>
       <Box

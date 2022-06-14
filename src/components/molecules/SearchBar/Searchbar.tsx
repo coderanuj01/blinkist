@@ -4,10 +4,6 @@ import { IconButtonComponent } from "../../atoms/IconButtons/IconButton";
 import { ReactComponent as SearchIcon } from "../../../Icon/searchicon.svg";
 import theme from "../../../theme/theme";
 
-type searchbarProps = {
-  children?: React.ReactNode;
-};
-
 const MyInput = styled("input")({
   border: "none",
   fontFamily: "Cera Pro",
@@ -16,7 +12,7 @@ const MyInput = styled("input")({
   },
 });
 
-export const SearchbarComponent = (props: searchbarProps) => {
+export const SearchbarComponent = () => {
   return (
     <ThemeProvider theme={theme}>
       <>

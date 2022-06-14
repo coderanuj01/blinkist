@@ -12,7 +12,7 @@ type IconButtonProps = {
     | "success"
     | "warning";
   children?: React.ReactNode;
-  size?: "small" | "medium" | "large" | undefined;
+  size?: "small" | "medium" | "large";
 };
 
 export const IconButtonComponent = (props: IconButtonProps) => {

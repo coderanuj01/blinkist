@@ -3,13 +3,11 @@ import { ImageComponent } from "../../atoms/Image/Image";
 import blink from "../../../Images/blink.png";
 import { NavFooterData as data } from "../../../data/NavFooterData";
 
-type FooterProps = {};
-
 let Items = styled("div")({
   marginTop: 16,
 });
 
-export const FooterComponent = (props: FooterProps) => {
+export const FooterComponent = () => {
   return (
     <Box sx={{ height: "370px", width: "100vw", backgroundColor: "#F1F6F4" }}>
       <Box

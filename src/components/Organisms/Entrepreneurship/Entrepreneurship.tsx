@@ -4,9 +4,7 @@ import { EntrepreneurshipInnerComponent } from "../EnterprenureInner/Entrepreneu
 import { NavBannerComponent } from "../NavBannner/NavBanner";
 import BooksDetails from "../../../data/BooksDetails";
 
-type EntrepreneurshipProps = {};
-
-export const EntrepreneurshipComponent = (props: EntrepreneurshipProps) => {
+export const EntrepreneurshipComponent = () => {
   let Trending = BooksDetails.filter((item) => item.status.isTrending);
   let justAdded = BooksDetails.filter((item) => item.status.justAdded);
   let Featured = BooksDetails.filter((item) => item.status.isFeatured);

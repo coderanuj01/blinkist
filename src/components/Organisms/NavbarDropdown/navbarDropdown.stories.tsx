@@ -5,12 +5,8 @@ export default {
   title: "Organism/NavbarDropdowns",
 };
 
-type NavbarDropdownProps = {
-  children?: React.ReactNode;
-};
-
-const Template: Story<NavbarDropdownProps> = (args) => (
-  <NavbarDropdownComponent {...args}></NavbarDropdownComponent>
+const Template: Story = () => (
+  <NavbarDropdownComponent></NavbarDropdownComponent>
 );
 
 export const NavbarDropdown = Template.bind({});
