@@ -15,7 +15,6 @@ export const UnderlineButtonComponent = (props: UnderlineButtonProps) => {
           variant="body1"
           sx={{
             fontFamily: "cera Pro",
-            fontWeight: 500,
             fontSize: "16px",
             color: "#03314B",
           }}
