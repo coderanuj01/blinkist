@@ -16,18 +16,3 @@ describe("simpleButton test", () => {
     expect(simpleButtonText).toBeInTheDocument();
   });
 });
-
-describe("simpleButton test again", () => {
-  it("connected rest button", () => {
-    render(
-      <SimpleButtonComponent
-        children={"test content"}
-        icon={<DropDownIcon />}
-        buttonType="connectRest"
-      />
-    );
-
-    const simpleButtonText = screen.getByText("test content");
-    expect(simpleButtonText).toBeInTheDocument();
-  });
-});
