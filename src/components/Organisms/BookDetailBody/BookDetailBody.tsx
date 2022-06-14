@@ -113,10 +113,18 @@ export const BookDetailBodyComponent = (props: BookDetailsProps) => {
               >
                 <UnderlineButtonComponent
                   children={"Synopsis"}
-                  underlineButtonType={
+                  style={
                     detailType === 1
-                      ? "unSelectedWithGreen"
-                      : "unSelectedWithWhite"
+                      ? {
+                          borderBottom: "2px solid #2CE080",
+                          width: 300,
+                          paddingBottom: 1,
+                        }
+                      : {
+                          borderBottom: "2px solid #E1ECFC",
+                          width: 300,
+                          paddingBottom: 1,
+                        }
                   }
                 ></UnderlineButtonComponent>
               </Box>
@@ -126,10 +134,18 @@ export const BookDetailBodyComponent = (props: BookDetailsProps) => {
               >
                 <UnderlineButtonComponent
                   children={"Who is it for?"}
-                  underlineButtonType={
+                  style={
                     detailType === 2
-                      ? "unSelectedWithGreen"
-                      : "unSelectedWithWhite"
+                      ? {
+                          borderBottom: "2px solid #2CE080",
+                          width: 300,
+                          paddingBottom: 1,
+                        }
+                      : {
+                          borderBottom: "2px solid #E1ECFC",
+                          width: 300,
+                          paddingBottom: 1,
+                        }
                   }
                 ></UnderlineButtonComponent>
               </Box>
@@ -139,10 +155,18 @@ export const BookDetailBodyComponent = (props: BookDetailsProps) => {
               >
                 <UnderlineButtonComponent
                   children={"About the Author"}
-                  underlineButtonType={
+                  style={
                     detailType === 3
-                      ? "unSelectedWithGreen"
-                      : "unSelectedWithWhite"
+                      ? {
+                          borderBottom: "2px solid #2CE080",
+                          width: 300,
+                          paddingBottom: 1,
+                        }
+                      : {
+                          borderBottom: "2px solid #E1ECFC",
+                          width: 300,
+                          paddingBottom: 1,
+                        }
                   }
                 ></UnderlineButtonComponent>
               </Box>

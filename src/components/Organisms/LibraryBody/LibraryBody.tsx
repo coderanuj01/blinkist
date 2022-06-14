@@ -44,21 +44,45 @@ export const LibraryBodyComponent = () => {
             <Box onClick={switchReading2} sx={{ cursor: "pointer" }}>
               <UnderlineButtonComponent
                 children={"Currently reading"}
-                underlineButtonType={
-                  readStatus === 1 ? "selectedWithGreen" : "unSelectedWithWhite"
+                style={
+                  readStatus === 1
+                    ? {
+                        borderBottom: "2px solid #2CE080",
+                        width: 300,
+                        paddingBottom: 1,
+                      }
+                    : {
+                        borderBottom: "2px solid #E1ECFC",
+                        width: 300,
+                        paddingBottom: 1,
+                      }
                 }
               ></UnderlineButtonComponent>
             </Box>
             <Box onClick={switchReading1} sx={{ cursor: "pointer" }}>
               <UnderlineButtonComponent
                 children={"Finished"}
-                underlineButtonType={
-                  readStatus === 2 ? "selectedWithGreen" : "unSelectedWithWhite"
+                style={
+                  readStatus === 2
+                    ? {
+                        borderBottom: "2px solid #2CE080",
+                        width: 300,
+                        paddingBottom: 1,
+                      }
+                    : {
+                        borderBottom: "2px solid #E1ECFC",
+                        width: 300,
+                        paddingBottom: 1,
+                      }
                 }
               ></UnderlineButtonComponent>
             </Box>
             <UnderlineButtonComponent
-              underlineButtonType={"unSelectedWithWhite"}
+              style={{
+                borderBottom: "2px solid #E1ECFC",
+                width: 300,
+                paddingBottom: 1,
+              }}
             ></UnderlineButtonComponent>
           </Box>
         </Box>
