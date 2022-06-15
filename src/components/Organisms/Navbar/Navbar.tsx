@@ -3,13 +3,12 @@ import { ImageComponent } from "../../atoms/Image/Image";
 import blink from "../../../Images/blink.png";
 import { IconButtonComponent } from "../../atoms/IconButtons/IconButton";
 import { ReactComponent as SearchIcon } from "../../../Icon/searchicon.svg";
-import { Typography } from "@mui/material";
 import React, { useState } from "react";
-import loginLogo from "../../../Images/loginLogo.png";
 import { ReactComponent as DropDownIcon } from "../../../Icon/dropdownarrow.svg";
 import { ReactComponent as UpArrow } from "../../../Icon/uparrow.svg";
 import { ButtonComponent } from "../../atoms/Buttons/Button";
 import { NavbarDropdownComponent } from "../../Organisms/NavbarDropdown/NavbarDropdown";
+import { ReactComponent as Account } from "../../../Icon/account.svg";
 
 type NavbarProps = {
   children?: React.ReactNode;
@@ -71,19 +70,7 @@ export const NavbarComponent = (props: NavbarProps) => {
             height: "36px",
           }}
         >
-          {props.isLoggedIn ? (
-            <ImageComponent source={loginLogo}></ImageComponent>
-          ) : (
-            <Typography
-              sx={{
-                paddingTop: "6px",
-                fontSize: 16,
-                fontFamily: "Cera Pro !important",
-              }}
-            >
-              Account
-            </Typography>
-          )}
+          <IconButtonComponent children={<Account />}></IconButtonComponent>
           <IconButtonComponent
             children={<DropDownIcon />}
           ></IconButtonComponent>

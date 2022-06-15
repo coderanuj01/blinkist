@@ -2,6 +2,7 @@ import { Story } from "@storybook/react";
 import { InfoCardComponent } from "./Infocard";
 import BeyondEnterprenurship from "../../../../public/Images/BeyondEnterprenurship.png";
 import dropshipping from "../../../../public/Images/dropshipping.png";
+import { MemoryRouter, Router } from "react-router-dom";
 
 export default {
   title: "Molecules/InfoCard",
@@ -22,7 +23,9 @@ type InfocardProps = {
 };
 
 const Template: Story<InfocardProps> = (args) => (
-  <InfoCardComponent {...args}></InfoCardComponent>
+  <MemoryRouter>
+    <InfoCardComponent {...args}></InfoCardComponent>
+  </MemoryRouter>
 );
 
 export const card1 = Template.bind({});

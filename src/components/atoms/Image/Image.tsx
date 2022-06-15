@@ -16,6 +16,6 @@ export const ImageComponent = (props: ImageProps) => {
       style={style}
       onClick={onClick}
       object-fit="cover"
-    ></img>
+    />
   );
 };
