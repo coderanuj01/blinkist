@@ -123,5 +123,5 @@ export const SimpleButtonComponent = (props: simpleButtonProps) => {
 
   const { buttonType, children, icon } = props;
 
-  return <>{elem({ buttonType })}</>;
+  return <>{elem(buttonType)}</>;
 };
