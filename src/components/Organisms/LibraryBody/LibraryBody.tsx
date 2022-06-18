@@ -1,11 +1,36 @@
-import { Box, ThemeProvider, Typography } from "@mui/material";
+import { Typography } from "@mui/material";
 import { CardGridComponent } from "../CardGrid/CardGrid";
 import BooksDetails from "../../../data/BooksDetails";
-import theme from "../../../theme/theme";
 import { UnderlineButtonComponent } from "../../molecules/UnderlinedButton/UnderlineButton";
 import { useState } from "react";
+import { styled } from "@mui/material";
 
-type BookPageProps = {};
+const OuterLibraryBody = styled("div")({
+  marginTop: "145px",
+});
+
+const PreOuterLibrary = styled("div")({
+  marginLeft: "264px",
+  marginTop: "59px",
+});
+
+const OuterMiddleLibrary = styled("div")({
+  marginTop: "60px",
+});
+
+const PreOuterMiddleLibrary = styled("div")({
+  display: "flex",
+  marginLeft: "264px",
+});
+
+const MiddleLibraryBox = styled("div")({
+  marginBottom: "111px",
+  marginTop: "25px",
+});
+
+const PointerBox = styled("div")({
+  cursor: "pointer",
+});
 
 export const LibraryBodyComponent = () => {
   const [readStatus, setReadStatus] = useState(1);
@@ -25,77 +50,79 @@ export const LibraryBodyComponent = () => {
   let finishedList = BooksDetails.filter((item) => item.status.isFinished);
 
   return (
-    <ThemeProvider theme={theme}>
-      <Box sx={{ marginTop: "145px" }}>
-        <Box sx={{ marginLeft: "264px", marginTop: "59px" }}>
-          <Typography
-            variant="h1"
-            sx={{
-              fontFamily: "Cera Pro",
-              fontWeight: 700,
-              fontSize: "36px",
-            }}
-          >
-            My Library
-          </Typography>
-        </Box>
-        <Box sx={{ marginTop: "60px" }}>
-          <Box sx={{ display: "flex", marginLeft: "264px" }}>
-            <Box onClick={switchReading2} sx={{ cursor: "pointer" }}>
-              <UnderlineButtonComponent
-                children={"Currently reading"}
-                style={
-                  readStatus === 1
-                    ? {
-                        borderBottom: "2px solid #2CE080",
-                        width: 300,
-                        paddingBottom: 1,
-                      }
-                    : {
-                        borderBottom: "2px solid #E1ECFC",
-                        width: 300,
-                        paddingBottom: 1,
-                      }
-                }
-              ></UnderlineButtonComponent>
-            </Box>
-            <Box onClick={switchReading1} sx={{ cursor: "pointer" }}>
-              <UnderlineButtonComponent
-                children={"Finished"}
-                style={
-                  readStatus === 2
-                    ? {
-                        borderBottom: "2px solid #2CE080",
-                        width: 300,
-                        paddingBottom: 1,
-                      }
-                    : {
-                        borderBottom: "2px solid #E1ECFC",
-                        width: 300,
-                        paddingBottom: 1,
-                      }
-                }
-              ></UnderlineButtonComponent>
-            </Box>
+    <OuterLibraryBody>
+      <PreOuterLibrary>
+        <Typography
+          variant="h1"
+          sx={{
+            fontFamily: "Cera Pro",
+            fontWeight: 700,
+            fontSize: "36px",
+          }}
+        >
+          My Library
+        </Typography>
+      </PreOuterLibrary>
+      <OuterMiddleLibrary>
+        <PreOuterMiddleLibrary>
+          <PointerBox onClick={switchReading2}>
             <UnderlineButtonComponent
-              style={{
-                borderBottom: "2px solid #E1ECFC",
-                width: 300,
-                paddingBottom: 1,
-              }}
+              children={"Currently reading"}
+              style={
+                readStatus === 1
+                  ? {
+                      borderBottom: "2px solid #2CE080",
+                      width: 300,
+                      paddingBottom: 1,
+                    }
+                  : {
+                      borderBottom: "2px solid #E1ECFC",
+                      width: 300,
+                      paddingBottom: 1,
+                    }
+              }
             ></UnderlineButtonComponent>
-          </Box>
-        </Box>
-        <Box sx={{ marginBottom: "111px", marginTop: "25px" }}>
-          {readStatus === 1 ? (
-            <CardGridComponent
-              cardList={currentReadingList}
-            ></CardGridComponent>
-          ) : (
-            <CardGridComponent cardList={finishedList}></CardGridComponent>
-          )}
-        </Box>
-      </Box>
-    </ThemeProvider>
+          </PointerBox>
+          <PointerBox onClick={switchReading1}>
+            <UnderlineButtonComponent
+              children={"Finished"}
+              style={
+                readStatus === 2
+                  ? {
+                      borderBottom: "2px solid #2CE080",
+                      width: 300,
+                      paddingBottom: 1,
+                    }
+                  : {
+                      borderBottom: "2px solid #E1ECFC",
+                      width: 300,
+                      paddingBottom: 1,
+                    }
+              }
+            ></UnderlineButtonComponent>
+          </PointerBox>
+          <UnderlineButtonComponent
+            style={{
+              borderBottom: "2px solid #E1ECFC",
+              width: 300,
+              paddingBottom: 1,
+            }}
+          ></UnderlineButtonComponent>
+        </PreOuterMiddleLibrary>
+      </OuterMiddleLibrary>
+      <MiddleLibraryBox>
+        {readStatus === 1 ? (
+          <CardGridComponent
+            cardList={currentReadingList}
+            cardsType={"finished"}
+          ></CardGridComponent>
+        ) : (
+          <CardGridComponent
+            cardList={finishedList}
+            cardsType={"readAgain"}
+          ></CardGridComponent>
+        )}
+      </MiddleLibraryBox>
+    </OuterLibraryBody>
   );
 };

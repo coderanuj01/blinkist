@@ -1,4 +1,5 @@
 import { Story } from "@storybook/react";
+import { MemoryRouter } from "react-router-dom";
 import { NavbarDropdownComponent } from "./NavbarDropdown";
 
 export default {
@@ -6,7 +7,9 @@ export default {
 };
 
 const Template: Story = () => (
-  <NavbarDropdownComponent></NavbarDropdownComponent>
+  <MemoryRouter>
+    <NavbarDropdownComponent></NavbarDropdownComponent>
+  </MemoryRouter>
 );
 
 export const NavbarDropdown = Template.bind({});

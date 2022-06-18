@@ -1,4 +1,4 @@
-import { Box, styled, Typography } from "@mui/material";
+import { styled, Typography } from "@mui/material";
 import { ImageComponent } from "../../atoms/Image/Image";
 import blink from "../../../Images/blink.png";
 import { NavFooterData as data } from "../../../data/NavFooterData";
@@ -7,19 +7,56 @@ let Items = styled("div")({
   marginTop: 16,
 });
 
+let OuterFooter = styled("div")({
+  height: "370px",
+  width: "100vw",
+  backgroundColor: "#F1F6F4",
+});
+
+let PreOuterFooter = styled("div")({
+  marginLeft: "244px",
+  height: "100%",
+  display: "flex",
+  flexDirection: "column",
+});
+
+let ImageOuter = styled("div")({
+  display: "flex",
+  flexDirection: "row",
+  marginTop: "34px",
+});
+
+let ImageInner = styled("div")({
+  width: "378px",
+});
+
+const HeadingText = styled("text")({
+  fontFamily: "Cera Pro",
+  fontWeight: 700,
+  fontSize: 16,
+  color: "#03314B",
+});
+
+const ListText = styled("text")({
+  color: "#6D787E",
+  fontFamily: "Cera Pro",
+  fontWeight: 400,
+});
+
+const WidthBox = styled("div")({
+  width: "214px",
+});
+
+const CopyWriteBox = styled("div")({
+  marginTop: "60px",
+});
+
 export const FooterComponent = () => {
   return (
-    <Box sx={{ height: "370px", width: "100vw", backgroundColor: "#F1F6F4" }}>
-      <Box
-        sx={{
-          marginLeft: "244px",
-          height: "100%",
-          display: "flex",
-          flexDirection: "column",
-        }}
-      >
-        <Box sx={{ display: "flex", flexDirection: "row", marginTop: "34px" }}>
-          <Box sx={{ width: "378px" }}>
+    <OuterFooter>
+      <PreOuterFooter>
+        <ImageOuter>
+          <ImageInner>
             <ImageComponent source={blink}></ImageComponent>
             <br></br>
             <br></br>
@@ -34,84 +71,33 @@ export const FooterComponent = () => {
             >
               Big ideas in small packages <br></br> Start learnign now
             </Typography>
-          </Box>
-          <Box sx={{ width: "214px" }}>
-            <Typography
-              sx={{
-                fontFamily: "Cera Pro",
-                fontWeight: 700,
-                fontSize: 16,
-                color: "#03314B",
-              }}
-            >
-              {data.Editorial.title}
-            </Typography>
+          </ImageInner>
+          <WidthBox>
+            <HeadingText>{data.Editorial.title}</HeadingText>
             {data.Editorial.data.map((text, key) => (
               <Items key={key}>
-                <Typography
-                  sx={{
-                    color: "#6D787E",
-                    fontFamily: "Cera Pro",
-                    fontWeight: 400,
-                  }}
-                >
-                  {text}
-                </Typography>
+                <ListText>{text}</ListText>
               </Items>
             ))}
-          </Box>
-          <Box sx={{ width: "214px" }}>
-            <Typography
-              sx={{
-                fontFamily: "Cera Pro",
-                fontWeight: 700,
-                fontSize: 16,
-                color: "#03314B",
-              }}
-            >
-              {data.UsefulLinks.title}
-            </Typography>
+          </WidthBox>
+          <WidthBox>
+            <HeadingText>{data.UsefulLinks.title}</HeadingText>
             {data.UsefulLinks.data.map((text, key) => (
               <Items key={key}>
-                <Typography
-                  sx={{
-                    color: "#6D787E",
-                    fontFamily: "Cera Pro",
-                    fontWeight: 400,
-                  }}
-                >
-                  {text}
-                </Typography>
+                <ListText>{text}</ListText>
               </Items>
             ))}
-          </Box>
-          <Box sx={{ width: "214px" }}>
-            <Typography
-              sx={{
-                fontFamily: "Cera Pro",
-                fontWeight: 700,
-                fontSize: 16,
-                color: "#03314B",
-              }}
-            >
-              {data.Company.title}
-            </Typography>
+          </WidthBox>
+          <WidthBox>
+            <HeadingText>{data.Company.title}</HeadingText>
             {data.Company.data.map((text, key) => (
               <Items key={key}>
-                <Typography
-                  sx={{
-                    color: "#6D787E",
-                    fontFamily: "Cera Pro",
-                    fontWeight: 400,
-                  }}
-                >
-                  {text}
-                </Typography>
+                <ListText>{text}</ListText>
               </Items>
             ))}
-          </Box>
-        </Box>
-        <Box sx={{ marginTop: "60px" }}>
+          </WidthBox>
+        </ImageOuter>
+        <CopyWriteBox>
           <Typography
             variant="subtitle2"
             sx={{
@@ -124,8 +110,8 @@ export const FooterComponent = () => {
             © Blinkist 2021 Sitemap | Imprint | Terms of Service | Privacy
             Policies
           </Typography>
-        </Box>
-      </Box>
-    </Box>
+        </CopyWriteBox>
+      </PreOuterFooter>
+    </OuterFooter>
   );
 };

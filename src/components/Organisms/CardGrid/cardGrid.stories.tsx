@@ -2,7 +2,7 @@ import { Story } from "@storybook/react";
 import { CardGridComponent } from "./CardGrid";
 
 export default {
-  title: "Molecules/CardGrids",
+  title: "Organism/CardGrids",
 };
 
 type CardGridProps = {};

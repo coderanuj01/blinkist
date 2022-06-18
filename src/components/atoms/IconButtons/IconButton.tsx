@@ -21,6 +21,6 @@ export const IconButtonComponent = (props: IconButtonProps) => {
       color={props.color}
       children={props.children}
       size={props.size}
-    ></IconButton>
+    />
   );
 };

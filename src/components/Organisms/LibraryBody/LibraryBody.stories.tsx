@@ -1,14 +1,17 @@
 import { Story } from "@storybook/react";
+import { MemoryRouter } from "react-router-dom";
 import { LibraryBodyComponent } from "./LibraryBody";
 
 export default {
-  title: "Organism/enterpenureBody",
+  title: "Organism/Body/LibraryBody",
 };
 
 type BookPageProps = {};
 
 const Template: Story<BookPageProps> = (args) => (
-  <LibraryBodyComponent {...args}></LibraryBodyComponent>
+  <MemoryRouter>
+    <LibraryBodyComponent {...args}></LibraryBodyComponent>
+  </MemoryRouter>
 );
 
 export const page = Template.bind({});

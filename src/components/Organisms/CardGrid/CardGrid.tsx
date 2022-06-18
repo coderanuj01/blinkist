@@ -1,5 +1,6 @@
-import { Box, Grid } from "@mui/material";
-import { InfoCardComponent } from "../../molecules/InfoCards/Infocard";
+import { Grid } from "@mui/material";
+import { InfoCardComponent } from "../../Organisms/BookCard/Infocard";
+import { styled } from "@mui/system";
 
 type cardProps = {
   id: number;
@@ -18,11 +19,23 @@ type cardProps = {
 
 type CardGridProps = {
   cardList?: Array<cardProps>;
+  cardsType?:
+    | "reading"
+    | "addToLibrary"
+    | "addToLibraryColor"
+    | "finished"
+    | "readAgain"
+    | undefined;
 };
+
+const CardBox = styled("div")({
+  width: "912px",
+  marginLeft: "264px",
+});
 
 export const CardGridComponent = (props: CardGridProps) => {
   return (
-    <Box sx={{ width: "912px", marginLeft: "264px" }}>
+    <CardBox>
       <Grid container spacing={2}>
         {props.cardList?.map((item) => {
           return (
@@ -33,12 +46,12 @@ export const CardGridComponent = (props: CardGridProps) => {
                 writer={item.author}
                 readCount={item.numberOfReads}
                 readTime={item.timeToRead}
-                readStatus={"addToLibrary"}
+                readStatus={props.cardsType}
               ></InfoCardComponent>
             </Grid>
           );
         })}
       </Grid>
-    </Box>
+    </CardBox>
   );
 };

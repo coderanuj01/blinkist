@@ -1,7 +1,5 @@
 import { ButtonComponent } from "./Button";
 import { Story } from "@storybook/react";
-import AddIcon from "@mui/icons-material/Add";
-import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
 export default {
@@ -23,10 +21,7 @@ type ButtonProps = {
     | "success"
     | "error"
     | "info"
-    | "warning"
-    | undefined;
-  onMouseEnter?: () => void;
-  onMouseLeave?: () => void;
+    | "warning";
   onClick?: () => void;
   className?: string;
 };
@@ -41,20 +36,4 @@ primaryA.args = {
   startIcon: <ArrowForwardIcon />,
   color: "primary",
   children: "outlined Button is",
-};
-
-export const primaryB = Template.bind({});
-primaryB.args = {
-  variant: "contained",
-  endIcon: <AddIcon />,
-  color: "error",
-  children: "contained Button is",
-};
-
-export const primaryC = Template.bind({});
-primaryC.args = {
-  variant: "text",
-  startIcon: <AddIcon />,
-  color: "error",
-  children: "Text Button is",
 };

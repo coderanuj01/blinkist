@@ -2,7 +2,7 @@ import { Story } from "@storybook/react";
 import { UnderlineButtonComponent } from "./UnderlineButton";
 
 export default {
-  title: "Molecules/UnderlineButton",
+  title: "Molecules/UnderlineButtons",
 };
 
 type UnderlineButtonProps = {
@@ -14,7 +14,8 @@ const Template: Story<UnderlineButtonProps> = (args) => (
   <UnderlineButtonComponent {...args}></UnderlineButtonComponent>
 );
 
-export const underlineButtonA = Template.bind({});
-underlineButtonA.args = {
+export const underlineButton = Template.bind({});
+underlineButton.args = {
   children: "Currently reading",
+  style: { borderBottom: "2px solid #2CE080", width: 300, paddingBottom: 1 },
 };

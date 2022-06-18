@@ -1,5 +1,5 @@
+import { styled } from "@mui/system";
 import { Typography } from "@mui/material";
-import { Box } from "@mui/system";
 import { IconButtonComponent } from "../../atoms/IconButtons/IconButton";
 
 type IconTextProps = {
@@ -23,10 +23,15 @@ type IconTextProps = {
   onClick?: () => void;
 };
 
+const MyBox = styled("div")({
+  display: "flex",
+  flexDirection: "row",
+});
+
 export const IconTextComponent = (props: IconTextProps) => {
   return (
-    <Box sx={{ display: "flex", flexDirection: "row" }}>
-      <IconButtonComponent children={props.iconSource}></IconButtonComponent>
+    <MyBox>
+      <IconButtonComponent children={props.iconSource} />
       <Typography
         variant={props.variant}
         onClick={props.onClick}
@@ -34,6 +39,6 @@ export const IconTextComponent = (props: IconTextProps) => {
       >
         {props.title}
       </Typography>
-    </Box>
+    </MyBox>
   );
 };

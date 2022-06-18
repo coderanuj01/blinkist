@@ -14,10 +14,7 @@ type ButtonProps = {
     | "error"
     | "info"
     | "warning";
-  onMouseEnter?: () => void;
-  onMouseLeave?: () => void;
   onClick?: () => void;
-  className?: string;
   textColor?: string;
 };
 

@@ -5,7 +5,7 @@ import dropshipping from "../../../../public/Images/dropshipping.png";
 import { MemoryRouter, Router } from "react-router-dom";
 
 export default {
-  title: "Molecules/InfoCard",
+  title: "Organism/InfoCard",
 };
 
 type InfocardProps = {

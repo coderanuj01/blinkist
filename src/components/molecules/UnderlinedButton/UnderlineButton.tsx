@@ -1,28 +1,22 @@
-import { ThemeProvider, Typography } from "@mui/material";
 import Box from "@mui/material/Box";
-import theme from "../../../theme/theme";
+import { styled } from "@mui/system";
 
 type UnderlineButtonProps = {
   children?: React.ReactNode;
   style?: React.CSSProperties;
 };
 
+const MyText = styled("text")({
+  fontFamily: "cera Pro",
+  fontWeight: 500,
+  fontSize: "16px",
+  color: "#03314B",
+});
+
 export const UnderlineButtonComponent = (props: UnderlineButtonProps) => {
   return (
-    <ThemeProvider theme={theme}>
-      <Box sx={props.style}>
-        <Typography
-          variant="body1"
-          sx={{
-            fontFamily: "cera Pro",
-            fontWeight: 500,
-            fontSize: "16px",
-            color: "#03314B",
-          }}
-        >
-          {props.children}
-        </Typography>
-      </Box>
-    </ThemeProvider>
+    <Box sx={props.style}>
+      <MyText>{props.children}</MyText>
+    </Box>
   );
 };
