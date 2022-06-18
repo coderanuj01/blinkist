@@ -1,5 +1,4 @@
-import { Typography } from "@mui/material";
-import { styled } from "@mui/material";
+import { Typography, styled } from "@mui/material";
 
 const OuterBanner = styled("div")({
   height: "264px",

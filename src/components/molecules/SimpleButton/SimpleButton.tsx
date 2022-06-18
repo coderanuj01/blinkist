@@ -38,8 +38,8 @@ const AddToLibraryBox = styled("div")({
 });
 
 export const SimpleButtonComponent = (props: simpleButtonProps) => {
-  const elem = () => {
-    switch (props.buttonType) {
+  const elem = (prop: any) => {
+    switch (prop) {
       case "connectRest":
         return (
           <ConnectedRestBox>
@@ -121,5 +121,7 @@ export const SimpleButtonComponent = (props: simpleButtonProps) => {
     }
   };
 
-  return <>{elem()}</>;
+  const { buttonType, children, icon } = props;
+
+  return <>{elem({ buttonType })}</>;
 };

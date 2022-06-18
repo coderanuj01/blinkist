@@ -1,9 +1,8 @@
-import { Typography } from "@mui/material";
+import { Typography, styled } from "@mui/material";
 import { CardGridComponent } from "../CardGrid/CardGrid";
 import BooksDetails from "../../../data/BooksDetails";
 import { UnderlineButtonComponent } from "../../molecules/UnderlinedButton/UnderlineButton";
 import { useState } from "react";
-import { styled } from "@mui/material";
 
 const OuterLibraryBody = styled("div")({
   marginTop: "145px",

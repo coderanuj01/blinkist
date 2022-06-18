@@ -1,9 +1,8 @@
-import { Box } from "@mui/system";
+import { Box, styled } from "@mui/system";
 import { SearchbarComponent } from "../../molecules/SearchBar/Searchbar";
 import { EntrepreneurshipInnerComponent } from "../EnterprenureInner/EntrepreneurshipInner";
 import { NavBannerComponent } from "../NavBannner/NavBanner";
 import BooksDetails from "../../../data/BooksDetails";
-import { styled } from "@mui/system";
 
 const OuterEnterpreneur = styled("div")({
   marginTop: "118px",
