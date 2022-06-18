@@ -15,4 +15,30 @@ describe("simpleButton test", () => {
     const simpleButtonText = screen.getByText("test content");
     expect(simpleButtonText).toBeInTheDocument();
   });
+
+  it("card button", () => {
+    render(
+      <SimpleButtonComponent
+        children={"test content"}
+        icon={<DropDownIcon />}
+        buttonType="buttonForCard"
+      />
+    );
+
+    const simpleButtonText = screen.getByText("test content");
+    expect(simpleButtonText).toBeInTheDocument();
+  });
+
+  it("library with button", () => {
+    render(
+      <SimpleButtonComponent
+        children={"test content"}
+        icon={<DropDownIcon />}
+        buttonType="libraryWithBorder"
+      />
+    );
+
+    const simpleButtonText = screen.getByText("test content");
+    expect(simpleButtonText).toBeInTheDocument();
+  });
 });
