@@ -24,8 +24,7 @@ type CardGridProps = {
     | "addToLibrary"
     | "addToLibraryColor"
     | "finished"
-    | "readAgain"
-    | undefined;
+    | "readAgain";
 };
 
 const CardBox = styled("div")({

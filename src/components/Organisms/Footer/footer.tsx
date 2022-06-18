@@ -82,17 +82,17 @@ export const FooterComponent = () => {
           </WidthBox>
           <WidthBox>
             <HeadingText>{data.UsefulLinks.title}</HeadingText>
-            {data.UsefulLinks.data.map((text, key) => (
+            {data.UsefulLinks.data.map((item, key) => (
               <Items key={key}>
-                <ListText>{text}</ListText>
+                <ListText>{item}</ListText>
               </Items>
             ))}
           </WidthBox>
           <WidthBox>
             <HeadingText>{data.Company.title}</HeadingText>
-            {data.Company.data.map((text, key) => (
+            {data.Company.data.map((texts, key) => (
               <Items key={key}>
-                <ListText>{text}</ListText>
+                <ListText>{texts}</ListText>
               </Items>
             ))}
           </WidthBox>
